@@ -1,0 +1,4 @@
+jar uf dirty-projectx-pcode.jar com/*
+jar uf gate-icon-projectx-pcode.jar "com\threerings\projectx\dungeon\data\GateSummary$Level.class"
+przenieś en.class
+jar uf safe-dirty-projectx-pcode.jar com/*
