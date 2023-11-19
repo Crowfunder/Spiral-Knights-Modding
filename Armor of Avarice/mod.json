@@ -1,0 +1,9 @@
+{
+    "mod": {
+      "name": "Armor of Avarice Pack",
+      "description": "Forged by an unknown armorsmith with metals known to amplify greed, as well as the desire to defile.",
+      "author": "Parma",
+      "version": "1.0.0",
+      "avarice" : "1"
+    }
+  }

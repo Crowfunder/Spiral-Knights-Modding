@@ -1,0 +1,8 @@
+{
+    "mod": {
+      "name": "Unarmed Shield Equip",
+      "description": "Equips the shield in non combat areas.",
+      "author": "parma",
+      "version": "1.0.0"
+    }
+  }
