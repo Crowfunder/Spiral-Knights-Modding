@@ -1,3 +1,6 @@
+![](https://github.com/Crowfunder/Spiral-Knights-Modding/blob/main/mods/The%20Return%20to%20Moyai%20Citadel/moyai_teaser_horizontal_vignette.png?raw=true)
+
+
 # Introduction
 Hello! This is probably the first story mod ever made. It recycles old story missions giving them a new interesting spin.The rules are simple, mod missions are marked as `[M-{Number}] {Name}`. Do them in order (also listed below) and have fun.
 
