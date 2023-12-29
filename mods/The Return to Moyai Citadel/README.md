@@ -13,6 +13,8 @@ Install the main mod normally and place projectx-config.jar in `Spiral Knights/c
 
 # Credits
 *Censored cuz spoilers~*
+@ainogommon for some textures from original Moyai Citadel
+
 The Return to Moyai Citadel Battle Theme - Remix of "Sewerslvt - Swinging in His Cell" by Parma
 
 External 3D models:
