@@ -6,7 +6,7 @@ Hello! This is probably the first story mod ever made. It recycles old story mis
 
 Challenge Mode is meant to serve as an additional entertainment in the missions you know so well. They are optional challenges you can complete for self-fullfilment needs. Completing them all is not necessary, but highly encouraged. ~~Should anyone complete all the challenges, I will reveal something interesting.~~
 
-**Note:** Please use https://discord.com/channels/653349356459786240/1189145563782971392 during winterfest, since caps may break immersion.
+**Note:** Please use https://github.com/Crowfunder/Spiral-Knights-Modding/tree/main/mods/No%20more%20winterfest%20caps during winterfest, since caps may break immersion.
 
 # Installation
 Install the main mod normally and place projectx-config.jar in `Spiral Knights/code` folder.
