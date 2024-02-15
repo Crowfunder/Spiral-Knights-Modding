@@ -1,0 +1,2887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java class="com.threerings.export.XMLImporter" version="1.0">
+<object class="com.threerings.opengl.model.config.ModelConfig" depth="0">
+  <parameters>
+    <entry class="com.threerings.config.Parameter$Choice" depth="2">
+      <outer rdepth="0"/>
+      <name>Charged</name>
+      <directs>
+        <entry>
+          <name>layers</name>
+          <paths>implementation.layers[4].visible, implementation.layers[5].visible, implementation.layers[6].visible, implementation.layers[0].visible, implementation.layers[7].visible</paths>
+        </entry>
+      </directs>
+      <options>
+        <entry>
+          <outer rdepth="2"/>
+          <name>false</name>
+          <arguments>
+            <key class="java.lang.String">layers</key>
+            <value class="java.lang.Boolean">false</value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>true</name>
+          <arguments>
+            <key class="java.lang.String">layers</key>
+            <value class="java.lang.Boolean">true</value>
+          </arguments>
+        </entry>
+      </options>
+    </entry>
+    <entry class="com.threerings.config.Parameter$Choice" depth="2">
+      <outer rdepth="0"/>
+      <name>Size</name>
+      <directs>
+        <entry>
+          <name>Icon Scale</name>
+          <paths>implementation.layers[0].size</paths>
+        </entry>
+        <entry>
+          <name>Icon Origin</name>
+          <paths>implementation.layers[0].transform</paths>
+        </entry>
+        <entry>
+          <name>Dome Scale</name>
+          <paths>implementation.layers[1].size</paths>
+        </entry>
+        <entry>
+          <name>Core Scale</name>
+          <paths>implementation.layers[2].size</paths>
+        </entry>
+        <entry>
+          <name>Flare Scale</name>
+          <paths>implementation.layers[3].size</paths>
+        </entry>
+        <entry>
+          <name>Flare Origin</name>
+          <paths>implementation.layers[3].transform</paths>
+        </entry>
+        <entry>
+          <name>Wave Scale</name>
+          <paths>implementation.layers[4].size</paths>
+        </entry>
+        <entry>
+          <name>Rings Scale</name>
+          <paths>implementation.layers[5].size, implementation.layers[6].size</paths>
+        </entry>
+        <entry>
+          <name>Rings Origin</name>
+          <paths>implementation.layers[5].transform, implementation.layers[6].transform</paths>
+        </entry>
+        <entry>
+          <name>Sparks Time</name>
+          <paths>implementation.layers[7].lifespan</paths>
+        </entry>
+        <entry>
+          <name>Glare Scale</name>
+          <paths>implementation.layers[8].size</paths>
+        </entry>
+        <entry>
+          <name>Glare Origin</name>
+          <paths>implementation.layers[8].transform</paths>
+        </entry>
+        <entry>
+          <name>Shadow Scale</name>
+          <paths>implementation.layers[9].size</paths>
+        </entry>
+        <entry>
+          <name>Shadow Origin</name>
+          <paths>implementation.layers[9].transform</paths>
+        </entry>
+        <entry>
+          <name>Dust Scale</name>
+          <paths>implementation.layers[10].size</paths>
+        </entry>
+        <entry>
+          <name>Dust Origin</name>
+          <paths>implementation.layers[10].transform</paths>
+        </entry>
+        <entry>
+          <name>Dust Area</name>
+          <paths>implementation.layers[10].placer</paths>
+        </entry>
+        <entry>
+          <name>Dust Time</name>
+          <paths>implementation.layers[10].lifespan</paths>
+        </entry>
+        <entry>
+          <name>Chunks Scale</name>
+          <paths>implementation.layers[11].size</paths>
+        </entry>
+        <entry>
+          <name>Chunks Origin</name>
+          <paths>implementation.layers[11].transform</paths>
+        </entry>
+        <entry>
+          <name>Chunks Area</name>
+          <paths>implementation.layers[11].placer</paths>
+        </entry>
+        <entry>
+          <name>Chunks Time</name>
+          <paths>implementation.layers[11].lifespan</paths>
+        </entry>
+        <entry>
+          <name>Scar Scale</name>
+          <paths>implementation.layers[12].size</paths>
+        </entry>
+      </directs>
+      <options>
+        <entry>
+          <outer rdepth="2"/>
+          <name>0.5</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Area</key>
+            <value class="com.threerings.opengl.effect.config.PlacerConfig$Ring">
+              <innerRadius>0.333</innerRadius>
+              <outerRadius>0.333</outerRadius>
+            </value>
+            <key class="java.lang.String">Chunks Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.25</translation>
+            </value>
+            <key class="java.lang.String">Chunks Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.025</start>
+                <middle>0.25</middle>
+                <end>0.28</end>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Chunks Time</key>
+            <value class="com.threerings.probs.FloatVariable$Uniform">
+              <minimum>1.0</minimum>
+              <maximum>1.2</maximum>
+            </value>
+            <key class="java.lang.String">Core Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$Linear">
+                <start>0.6</start>
+                <end>0.9</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$Multipoint">
+                <start>0.05</start>
+                <middle>
+                  <entry>
+                    <value>1.2</value>
+                    <offset>0.025</offset>
+                  </entry>
+                </middle>
+                <end>1.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Area</key>
+            <value class="com.threerings.opengl.effect.config.PlacerConfig$Shell">
+              <outerRadius>0.25</outerRadius>
+            </value>
+            <key class="java.lang.String">Dust Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.1</translation>
+            </value>
+            <key class="java.lang.String">Dust Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.1</start>
+                <middle>0.5</middle>
+                <end>0.4</end>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Time</key>
+            <value class="com.threerings.probs.FloatVariable$Uniform">
+              <minimum>1.0</minimum>
+              <maximum>1.25</maximum>
+            </value>
+            <key class="java.lang.String">Flare Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.25</translation>
+            </value>
+            <key class="java.lang.String">Flare Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>1.5</middle>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.25</translation>
+            </value>
+            <key class="java.lang.String">Glare Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>2.0</middle>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Icon Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.25</translation>
+            </value>
+            <key class="java.lang.String">Icon Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>0.6</middle>
+                <end>0.7</end>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Rings Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.3</translation>
+              <rotation>0.0, 0.0, 3.9643706E-9, 1.0</rotation>
+            </value>
+            <key class="java.lang.String">Rings Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <middle>0.8</middle>
+                <end>1.0</end>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <middle>1.2</middle>
+                <end>1.3</end>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.25</translation>
+            </value>
+            <key class="java.lang.String">Shadow Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>2.25</middle>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Time</key>
+            <value class="com.threerings.probs.FloatVariable$Uniform">
+              <minimum>0.5</minimum>
+              <maximum>0.75</maximum>
+            </value>
+            <key class="java.lang.String">Wave Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <middle>0.5</middle>
+                <end>1.5</end>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>1.0</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Area</key>
+            <value class="com.threerings.opengl.effect.config.PlacerConfig$Ring">
+              <innerRadius>0.5</innerRadius>
+              <outerRadius>0.5</outerRadius>
+            </value>
+            <key class="java.lang.String">Chunks Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.35</translation>
+            </value>
+            <key class="java.lang.String">Chunks Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.025</start>
+                <middle>0.4</middle>
+                <end>0.5</end>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Chunks Time</key>
+            <value class="com.threerings.probs.FloatVariable$Uniform">
+              <minimum>1.1</minimum>
+              <maximum>1.4</maximum>
+            </value>
+            <key class="java.lang.String">Core Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$Linear">
+                <start>1.2</start>
+                <end>1.5</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$Multipoint">
+                <start>0.05</start>
+                <middle>
+                  <entry>
+                    <value>1.8</value>
+                    <offset>0.025</offset>
+                  </entry>
+                </middle>
+                <end>1.6</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Area</key>
+            <value class="com.threerings.opengl.effect.config.PlacerConfig$Shell">
+              <outerRadius>0.35</outerRadius>
+            </value>
+            <key class="java.lang.String">Dust Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.33</translation>
+            </value>
+            <key class="java.lang.String">Dust Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.1</start>
+                <middle>0.65</middle>
+                <end>0.5</end>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Time</key>
+            <value class="com.threerings.probs.FloatVariable$Uniform">
+              <minimum>1.25</minimum>
+              <maximum>1.5</maximum>
+            </value>
+            <key class="java.lang.String">Flare Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.3</translation>
+            </value>
+            <key class="java.lang.String">Flare Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>2.25</middle>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.3</translation>
+            </value>
+            <key class="java.lang.String">Glare Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>2.5</middle>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Icon Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.3</translation>
+            </value>
+            <key class="java.lang.String">Icon Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>1.0</middle>
+                <end>1.1</end>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Rings Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.5</translation>
+              <rotation>0.0, 0.0, 3.9643706E-9, 1.0</rotation>
+            </value>
+            <key class="java.lang.String">Rings Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <middle>1.35</middle>
+                <end>1.5</end>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <middle>1.9</middle>
+                <end>2.0</end>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.3</translation>
+            </value>
+            <key class="java.lang.String">Shadow Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>2.75</middle>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Time</key>
+            <value class="com.threerings.probs.FloatVariable$Uniform">
+              <minimum>0.5</minimum>
+              <maximum>0.75</maximum>
+            </value>
+            <key class="java.lang.String">Wave Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <middle>0.5</middle>
+                <end>2.0</end>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>1.5</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Area</key>
+            <value class="com.threerings.opengl.effect.config.PlacerConfig$Ring">
+              <innerRadius>0.9</innerRadius>
+              <outerRadius>0.9</outerRadius>
+            </value>
+            <key class="java.lang.String">Chunks Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.3</translation>
+            </value>
+            <key class="java.lang.String">Chunks Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.025</start>
+                <middle>0.5</middle>
+                <end>0.6</end>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Chunks Time</key>
+            <value class="com.threerings.probs.FloatVariable$Uniform">
+              <minimum>1.4</minimum>
+              <maximum>1.6</maximum>
+            </value>
+            <key class="java.lang.String">Core Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$Linear">
+                <start>1.5</start>
+                <end>1.7</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$Multipoint">
+                <start>0.05</start>
+                <middle>
+                  <entry>
+                    <value>2.0</value>
+                    <offset>0.025</offset>
+                  </entry>
+                </middle>
+                <end>1.8</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Area</key>
+            <value class="com.threerings.opengl.effect.config.PlacerConfig$Shell">
+              <innerRadius>0.25</innerRadius>
+              <outerRadius>0.5</outerRadius>
+            </value>
+            <key class="java.lang.String">Dust Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.75</translation>
+            </value>
+            <key class="java.lang.String">Dust Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.1</start>
+                <middle>0.9</middle>
+                <end>0.75</end>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Time</key>
+            <value class="com.threerings.probs.FloatVariable$Uniform">
+              <minimum>1.25</minimum>
+              <maximum>1.5</maximum>
+            </value>
+            <key class="java.lang.String">Flare Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.5</translation>
+            </value>
+            <key class="java.lang.String">Flare Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>2.0</middle>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.5</translation>
+            </value>
+            <key class="java.lang.String">Glare Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>3.0</middle>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Icon Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.45</translation>
+            </value>
+            <key class="java.lang.String">Icon Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>1.0</middle>
+                <end>1.2</end>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Rings Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.6</translation>
+              <rotation>0.0, 0.0, 3.9643706E-9, 1.0</rotation>
+            </value>
+            <key class="java.lang.String">Rings Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <middle>1.8</middle>
+                <end>2.0</end>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <middle>2.4</middle>
+                <end>2.5</end>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Origin</key>
+            <value class="com.threerings.math.Transform3D">
+              <translation>0.0, 0.0, 0.5</translation>
+            </value>
+            <key class="java.lang.String">Shadow Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <start>0.5</start>
+                <middle>3.2</middle>
+                <in>0.05</in>
+                <out>0.95</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Time</key>
+            <value class="com.threerings.probs.FloatVariable$Uniform">
+              <minimum>0.75</minimum>
+              <maximum>1.0</maximum>
+            </value>
+            <key class="java.lang.String">Wave Scale</key>
+            <value class="com.threerings.probs.FloatFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+                <middle>1.0</middle>
+                <end>2.25</end>
+                <in>0.1</in>
+                <out>0.9</out>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+      </options>
+    </entry>
+    <entry class="com.threerings.config.Parameter$Direct">
+      <name>Icon</name>
+      <paths>implementation.layers[0].material["Texture"]["File"]</paths>
+    </entry>
+    <entry class="com.threerings.config.Parameter$Choice" depth="2">
+      <outer rdepth="0"/>
+      <name>Color</name>
+      <directs>
+        <entry>
+          <name>icon color</name>
+          <paths>implementation.layers[0].color</paths>
+        </entry>
+        <entry>
+          <name>Dome Color</name>
+          <paths>implementation.layers[1].color</paths>
+        </entry>
+        <entry>
+          <name>Core Color</name>
+          <paths>implementation.layers[2].color</paths>
+        </entry>
+        <entry>
+          <name>Flare Color</name>
+          <paths>implementation.layers[3].color</paths>
+        </entry>
+        <entry>
+          <name>Wave Color</name>
+          <paths>implementation.layers[4].color</paths>
+        </entry>
+        <entry>
+          <name>Ring Color</name>
+          <paths>implementation.layers[5].color, implementation.layers[6].color</paths>
+        </entry>
+        <entry>
+          <name>Sparks Color</name>
+          <paths>implementation.layers[7].color</paths>
+        </entry>
+        <entry>
+          <name>Glare Color</name>
+          <paths>implementation.layers[8].color</paths>
+        </entry>
+        <entry>
+          <name>Shadow Color</name>
+          <paths>implementation.layers[9].color</paths>
+        </entry>
+        <entry>
+          <name>Dust Color</name>
+          <paths>implementation.layers[10].color</paths>
+        </entry>
+        <entry>
+          <name>Chunks Color</name>
+          <paths>implementation.layers[11].color</paths>
+        </entry>
+        <entry>
+          <name>Scar Color</name>
+          <paths>implementation.layers[12].color</paths>
+        </entry>
+      </directs>
+      <options>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Cyan</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.35686275, 0.35686275, 0.17254902, 1.0</start>
+                <end>0.1764706, 0.13725491, 0.05882353, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <middle>1.0, 1.0, 0.6, 1.0</middle>
+                <end>0.6, 0.4, 0.0, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>1.0, 1.0, 0.4, 0.0</start>
+                <middle>0.8, 0.8, 0.0, 0.5</middle>
+                <end>0.2784314, 0.21568628, 0.14901961, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.8, 1.0</start>
+                <end>0.46666667, 0.46666667, 0.21568628, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.6, 1.0</start>
+                <end>0.3647059, 0.28627452, 0.12941177, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.8, 1.0</start>
+                <end>0.2, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.8, 1.0</start>
+                <end>0.6, 0.4, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>0.6, 0.6, 0.0, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.23137255, 0.19215687, 0.12941177, 0.75</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.0, 0.0, 0.0, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.4, 1.0</start>
+                <end>0.36862746, 0.29411766, 0.03137255, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.4, 0.5</start>
+                <end>0.4, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.6, 1.0</start>
+                <end>0.6, 0.4, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.41568628, 0.33333334, 0.0, 1.0</start>
+                <end>0.4, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Green</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.0, 0.7294118, 0.003921569, 1.0</start>
+                <end>0.0, 0.14901961, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <middle>0.8980392, 1.0, 0.8, 1.0</middle>
+                <end>0.0, 0.6, 0.003921569, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>0.8, 1.0, 0.6, 0.0</start>
+                <middle>0.4, 1.0, 0.40392157, 0.5</middle>
+                <end>0.0, 0.2, 0.0, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.8980392, 1.0, 0.8, 1.0</start>
+                <end>0.0, 0.7607843, 0.003921569, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.8980392, 1.0, 0.8, 1.0</start>
+                <end>0.0, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.8980392, 1.0, 0.8, 1.0</start>
+                <end>0.0, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.8980392, 1.0, 0.8, 1.0</start>
+                <end>0.0, 0.8, 0.003921569, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>0.0, 1.0, 0.003921569, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.23921569, 0.32941177, 0.24313726, 0.75</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.0, 0.0, 0.0, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.0, 0.6, 0.003921569, 1.0</start>
+                <end>0.0, 0.4, 0.003921569, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.4, 1.0, 0.40392157, 0.5</start>
+                <end>0.0, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.8980392, 1.0, 0.8, 1.0</start>
+                <end>0.0, 0.8, 0.003921569, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.0, 0.6, 0.003921569, 1.0</start>
+                <end>0.0, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Red</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.7294118, 0.0, 0.0, 1.0</start>
+                <end>0.14901961, 0.0, 0.07058824, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <middle>1.0, 0.8, 0.8, 1.0</middle>
+                <end>0.35686275, 0.0, 0.6, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>1.0, 0.6, 0.6, 0.0</start>
+                <middle>1.0, 0.4, 0.4, 0.5</middle>
+                <end>0.11764706, 0.0, 0.2, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.8, 1.0</start>
+                <end>0.7607843, 0.0, 0.48235294, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.8, 1.0</start>
+                <end>0.11764706, 0.0, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.8, 1.0</start>
+                <end>0.11764706, 0.0, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.8, 1.0</start>
+                <end>0.47843137, 0.0, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>1.0, 0.0, 0.0, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.33333334, 0.24313726, 0.30588236, 0.75</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.0, 0.0, 0.0, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.0, 0.0, 1.0</start>
+                <end>0.4, 0.0, 0.22745098, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.4, 0.4, 0.5</start>
+                <end>0.11764706, 0.0, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.8, 1.0</start>
+                <end>0.47843137, 0.0, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.0, 0.0, 1.0</start>
+                <end>0.11764706, 0.0, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Gravidos</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.4, 0.0, 0.6, 0.5</start>
+                <end>0.2, 0.0, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>0.6, 0.0, 1.0, 0.0</start>
+                <middle>0.39607844, 0.14901961, 0.6392157, 1.0</middle>
+                <end>0.2, 0.0, 0.2, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>0.7647059, 0.6, 1.0, 0.0</start>
+                <middle>0.54901963, 0.4, 1.0, 0.5</middle>
+                <end>0.1254902, 0.0, 0.2, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.4, 0.0, 0.4, 1.0</start>
+                <end>0.0, 0.0, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.8, 0.6, 1.0, 1.0</start>
+                <end>0.2, 0.0, 0.4, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.0, 1.0, 1.0</start>
+                <end>0.2, 0.0, 0.4, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.65882355, 0.41960785, 1.0, 0.5</start>
+                <end>0.6, 0.0, 0.4, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>0.6, 0.0, 0.8, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.2, 0.0, 0.4, 0.25</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.0, 0.0, 0.2, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.0, 0.8, 1.0</start>
+                <end>0.2, 0.0, 0.4, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.4, 1.0</start>
+                <end>1.0, 0.6, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.4, 1.0</start>
+                <end>1.0, 0.7490196, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>0.27450982, 0.0, 0.27450982, 0.5</start>
+                <middle>0.8, 0.0, 0.4, 1.0</middle>
+                <end>0.2, 0.0, 0.0, 0.0</end>
+                <out>0.5</out>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Yellow</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.35686275, 0.35686275, 0.17254902, 1.0</start>
+                <end>0.1764706, 0.13725491, 0.05882353, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <middle>1.0, 1.0, 0.6, 1.0</middle>
+                <end>0.6, 0.4, 0.0, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>1.0, 1.0, 0.4, 0.0</start>
+                <middle>0.8, 0.8, 0.0, 0.5</middle>
+                <end>0.2784314, 0.21568628, 0.14901961, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.8, 1.0</start>
+                <end>0.46666667, 0.46666667, 0.21568628, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.6, 1.0</start>
+                <end>0.3647059, 0.28627452, 0.12941177, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.8, 1.0</start>
+                <end>0.2, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.8, 1.0</start>
+                <end>0.6, 0.4, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>0.6, 0.6, 0.0, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.23137255, 0.19215687, 0.12941177, 0.75</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.0, 0.0, 0.0, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.4, 1.0</start>
+                <end>0.36862746, 0.29411766, 0.03137255, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.4, 0.5</start>
+                <end>0.4, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 1.0, 0.6, 1.0</start>
+                <end>0.6, 0.4, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.41568628, 0.33333334, 0.0, 1.0</start>
+                <end>0.4, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Fire Red</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.35686275, 0.21960784, 0.12156863, 0.5</start>
+                <end>0.003921569, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>1.0, 0.92156863, 0.2, 0.0</start>
+                <middle>1.0, 0.4, 0.0, 1.0</middle>
+                <end>1.0, 0.0, 0.0, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>1.0, 1.0, 0.4, 0.0</start>
+                <middle>1.0, 0.8, 0.2, 0.5</middle>
+                <end>0.6, 0.0, 0.0, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.0, 1.0</start>
+                <end>0.8, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.2, 1.0</start>
+                <end>0.6, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.0, 1.0</start>
+                <end>0.8, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.2, 1.0</start>
+                <end>0.8, 0.2, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>1.0, 0.4, 0.0, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.23529412, 0.18431373, 0.14509805, 0.5</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.0, 0.0, 0.0, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.4862745, 0.0, 1.0</start>
+                <end>0.49019608, 0.105882354, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.8, 0.0, 0.5</start>
+                <end>0.6, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.6, 0.0, 1.0</start>
+                <end>0.8, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.6, 0.2, 1.0</start>
+                <end>0.8, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Hateful Orange</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.4, 0.2, 0.0, 1.0</start>
+                <end>0.105882354, 0.05490196, 0.05490196, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>1.0, 0.34901962, 0.0, 0.0</start>
+                <middle>1.0, 0.2, 0.0, 1.0</middle>
+                <end>0.8, 0.0, 0.0, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>1.0, 0.38431373, 0.0, 0.0</start>
+                <middle>1.0, 0.4, 0.0, 0.5</middle>
+                <end>1.0, 0.2, 0.0, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.4, 0.0, 1.0</start>
+                <end>0.8, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.4, 0.0, 1.0</start>
+                <end>0.32941177, 0.16078432, 0.16078432, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.2, 0.0, 1.0</start>
+                <end>0.6, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.4, 0.0, 1.0</start>
+                <end>0.6, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>1.0, 0.33333334, 0.0, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.2, 0.12156863, 0.08627451, 0.75</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.0, 0.0, 0.0, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.2, 0.0, 1.0</start>
+                <end>0.27058825, 0.14901961, 0.12156863, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.4, 0.0, 0.5</start>
+                <end>0.6, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.4, 0.0, 1.0</start>
+                <end>0.3882353, 0.12941177, 0.12941177, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>1.0, 0.4, 0.0, 1.0</start>
+                <end>0.6, 0.0, 0.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Frost</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.0, 0.6, 0.8, 1.0</start>
+                <end>0.0, 0.4, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <middle>0.6, 0.8, 1.0, 1.0</middle>
+                <end>0.0, 0.6, 1.0, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>0.6, 0.8, 1.0, 0.0</start>
+                <middle>0.4, 0.6, 1.0, 0.5</middle>
+                <end>0.0, 0.4, 0.8, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.8, 1.0, 1.0</start>
+                <end>0.0, 0.4, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.8, 1.0, 1.0</start>
+                <end>0.0, 0.4, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.8, 1.0, 1.0</start>
+                <end>0.0, 0.4, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.8, 1.0, 1.0</start>
+                <end>0.0, 0.4, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>0.2, 0.6, 1.0, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.16078432, 0.3019608, 0.4392157, 0.75</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.0, 0.0, 0.0, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.0, 0.6, 0.8, 1.0</start>
+                <end>0.0, 0.4, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.8, 1.0, 0.5</start>
+                <end>0.0, 0.4, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.8, 1.0, 1.0</start>
+                <end>0.0, 0.4, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.5568628, 0.7058824, 0.9098039, 1.0</start>
+                <end>0.0, 0.08627451, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Purple</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.4, 0.0, 1.0, 1.0</start>
+                <end>0.0, 0.0, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>1.0, 0.0, 0.8, 0.0</start>
+                <middle>0.0, 0.2, 1.0, 1.0</middle>
+                <end>0.4, 0.0, 0.6, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>0.6, 0.0, 0.6, 0.0</start>
+                <middle>0.0, 0.2, 1.0, 0.5</middle>
+                <end>0.0, 0.2, 0.2, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.4, 0.0, 0.6, 1.0</start>
+                <end>0.0, 0.2, 1.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.2, 0.2, 1.0, 1.0</start>
+                <end>0.2, 0.0, 0.6, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.0, 0.6, 1.0</start>
+                <end>0.0, 0.0, 1.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.0, 0.2, 1.0, 1.0</start>
+                <end>0.6, 0.0, 0.6, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>0.4, 0.0, 0.8, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.0, 0.0, 0.4, 0.75</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.2, 0.0, 0.6, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6, 0.0, 0.6, 1.0</start>
+                <end>0.0, 0.2, 1.0, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.2, 0.0, 0.8, 0.5</start>
+                <end>0.6, 0.0, 0.6, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.0, 0.0, 1.0, 1.0</start>
+                <end>0.2, 0.0, 0.6, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.4, 0.0, 0.8, 1.0</start>
+                <end>0.0, 0.2, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+        <entry>
+          <outer rdepth="2"/>
+          <name>Celestial</name>
+          <arguments>
+            <key class="java.lang.String">Chunks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.13725491, 0.37254903, 0.54901963, 1.0</start>
+                <end>0.0, 0.08627451, 0.14901961, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Core Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <middle>0.4509804, 0.7647059, 1.0, 1.0</middle>
+                <end>0.0, 0.28627452, 0.5019608, 0.0</end>
+                <in>0.05</in>
+                <out>0.5</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dome Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+                <start>0.6, 0.83137256, 1.0, 0.0</start>
+                <middle>0.4, 0.74509805, 1.0, 0.5</middle>
+                <end>0.0, 0.11372549, 0.2, 0.0</end>
+                <out>0.75</out>
+              </function>
+            </value>
+            <key class="java.lang.String">Dust Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.4862745, 0.65882355, 0.7490196, 1.0</start>
+                <end>0.0, 0.08627451, 0.14901961, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Flare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.8, 0.9647059, 1.0, 1.0</start>
+                <end>0.0, 0.11372549, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Glare Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6509804, 0.8784314, 1.0, 1.0</start>
+                <end>0.0, 0.11372549, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Ring Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.5529412, 0.72156864, 0.8509804, 1.0</start>
+                <end>0.02745098, 0.3254902, 0.54901963, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Scar Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+                <start>0.0, 0.8235294, 1.0, 1.0</start>
+                <middle>
+                  <entry>
+                    <color>0.23921569, 0.3137255, 0.32941177, 0.75</color>
+                    <offset>0.15</offset>
+                  </entry>
+                </middle>
+                <end>0.011764706, 0.011764706, 0.011764706, 0.0</end>
+              </function>
+            </value>
+            <key class="java.lang.String">Shadow Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.0, 0.34509805, 0.6, 1.0</start>
+                <end>0.0, 0.23137255, 0.4, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Sparks Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.6509804, 0.9372549, 1.0, 0.5</start>
+                <end>0.0, 0.11372549, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">Wave Color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.8, 0.9647059, 1.0, 1.0</start>
+                <end>0.0, 0.45882353, 0.8, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+            <key class="java.lang.String">icon color</key>
+            <value class="com.threerings.probs.ColorFunctionVariable$Fixed">
+              <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+                <start>0.0, 0.49411765, 0.6, 1.0</start>
+                <end>0.0, 0.11372549, 0.2, 0.0</end>
+                <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+                </easing>
+              </function>
+            </value>
+          </arguments>
+        </entry>
+      </options>
+    </entry>
+  </parameters>
+  <implementation class="com.threerings.opengl.effect.config.ParticleSystemConfig">
+    <influences>
+      <fog>false</fog>
+      <lights>false</lights>
+      <projections>false</projections>
+      <definitions>false</definitions>
+    </influences>
+    <layers>
+      <entry>
+        <name>ICON</name>
+        <particleCount>1</particleCount>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.0, 0.6, 0.6, 1.0</start>
+            <end>0.0, 0.2, 0.2, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <start>0.5</start>
+            <middle>0.6</middle>
+            <end>0.7</end>
+            <in>0.1</in>
+            <out>0.9</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.25</translation>
+        </transform>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Outward">
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Constant">
+        </speed>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Constant">
+          <value>1.0</value>
+        </lifespan>
+        <timeScale>1.75</timeScale>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Meshes">
+          <model>
+            <name>particle/mesh/offcenter_forward/model.dat</name>
+          </model>
+        </geometry>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_icon_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <priorityMode>
+          <priority>9</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>15.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>dome out</name>
+        <particleCount>3</particleCount>
+        <alphaMode>ADDITIVE</alphaMode>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+            <start>0.6, 1.0, 0.8, 0.0</start>
+            <middle>0.4, 1.0, 1.0, 0.5</middle>
+            <end>0.0, 0.2, 0.2, 0.0</end>
+            <out>0.75</out>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Multipoint">
+            <start>0.05</start>
+            <middle>
+              <entry>
+                <value>1.2</value>
+                <offset>0.025</offset>
+              </entry>
+            </middle>
+            <end>1.0</end>
+          </function>
+        </size>
+        <orientation class="com.threerings.probs.QuaternionVariable$Constant">
+          <value>0.0, 0.0, 0.25881904, 0.9659258</value>
+        </orientation>
+        <moveParticlesWithEmitter>true</moveParticlesWithEmitter>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Cone">
+          <direction>0.0, -4.371139E-8, 1.0</direction>
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Uniform">
+        </speed>
+        <angularVelocity class="com.threerings.probs.VectorVariable$Constant">
+          <value>0.0, 0.0, 1.5707964</value>
+        </angularVelocity>
+        <counter class="com.threerings.opengl.effect.config.CounterConfig$RandomIntervals">
+          <interval class="com.threerings.probs.FloatVariable$Constant">
+            <value>0.2</value>
+          </interval>
+        </counter>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>2.25</minimum>
+          <maximum>2.75</maximum>
+        </lifespan>
+        <timeScale>6.0</timeScale>
+        <influences>
+          <entry class="com.threerings.opengl.effect.config.InfluenceConfig$AngularAcceleration">
+            <acceleration>0.0, 0.0, -0.2617994</acceleration>
+          </entry>
+        </influences>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Meshes">
+          <model>
+            <name>particle/mesh/dome_smaller/model.dat</name>
+          </model>
+        </geometry>
+        <alignment>FIXED</alignment>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>2</textureDivisionsS>
+        <textureDivisionsT>4</textureDivisionsT>
+        <depthSort>true</depthSort>
+        <priorityMode>
+          <priority>5</priority>
+        </priorityMode>
+        <rotateOrientationsWithEmitter>true</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>dome solid</name>
+        <particleCount>1</particleCount>
+        <alphaMode>ADDITIVE</alphaMode>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$ThreePoint">
+            <middle>0.8, 1.0, 1.0, 1.0</middle>
+            <end>0.0, 0.6, 0.6, 0.0</end>
+            <in>0.05</in>
+            <out>0.5</out>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Linear">
+            <start>0.6</start>
+            <end>0.9</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+            </easing>
+          </function>
+        </size>
+        <orientation class="com.threerings.probs.QuaternionVariable$Constant">
+          <value>0.0, 0.0, 0.70710665, 0.70710695</value>
+        </orientation>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Cone">
+          <direction>0.0, -4.371139E-8, 1.0</direction>
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Uniform">
+        </speed>
+        <angularVelocity class="com.threerings.probs.VectorVariable$Constant">
+          <value>0.0, 0.0, 3.9269907</value>
+        </angularVelocity>
+        <counter class="com.threerings.opengl.effect.config.CounterConfig$ConstantRate">
+          <rate>8.0</rate>
+        </counter>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>2.25</minimum>
+          <maximum>2.75</maximum>
+        </lifespan>
+        <timeScale>7.0</timeScale>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Meshes">
+          <model>
+            <name>particle/mesh/dome_smaller/model.dat</name>
+          </model>
+        </geometry>
+        <alignment>FIXED</alignment>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value/>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <depthSort>true</depthSort>
+        <priorityMode>
+        </priorityMode>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>flare</name>
+        <particleCount>2</particleCount>
+        <alphaMode>ADDITIVE</alphaMode>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.8, 1.0, 1.0, 1.0</start>
+            <end>0.0, 0.2, 0.2, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <start>0.5</start>
+            <middle>1.5</middle>
+            <in>0.1</in>
+            <out>0.9</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.25</translation>
+        </transform>
+        <orientation class="com.threerings.probs.QuaternionVariable$Uniform">
+          <minimum>0.0, 0.0, -3.1415927</minimum>
+          <maximum>0.0, 0.0, 3.1415927</maximum>
+        </orientation>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Outward">
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Constant">
+        </speed>
+        <angularVelocity class="com.threerings.probs.VectorVariable$Uniform">
+          <minimum>0.0, 0.0, -3.4906585</minimum>
+          <maximum>0.0, 0.0, 3.4906585</maximum>
+        </angularVelocity>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Constant">
+          <value>1.0</value>
+        </lifespan>
+        <timeScale>3.0</timeScale>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Meshes">
+          <model>
+            <name>particle/mesh/offcenter_forward/model.dat</name>
+          </model>
+        </geometry>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>2</textureDivisionsS>
+        <textureDivisionsT>2</textureDivisionsT>
+        <priorityMode>
+          <priority>-1</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>1.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>wave</name>
+        <particleCount>2</particleCount>
+        <alphaMode>ADDITIVE</alphaMode>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.8, 1.0, 1.0, 1.0</start>
+            <end>0.0, 0.8, 0.8, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <middle>0.5</middle>
+            <end>1.5</end>
+            <in>0.1</in>
+            <out>0.9</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.25</translation>
+        </transform>
+        <orientation class="com.threerings.probs.QuaternionVariable$Uniform">
+          <minimum>0.0, 0.0, -3.1415927</minimum>
+          <maximum>0.0, 0.0, 3.1415927</maximum>
+        </orientation>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Outward">
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Constant">
+        </speed>
+        <angularVelocity class="com.threerings.probs.VectorVariable$Uniform">
+          <minimum>0.0, 0.0, -3.4906585</minimum>
+          <maximum>0.0, 0.0, 3.4906585</maximum>
+        </angularVelocity>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Constant">
+          <value>0.75</value>
+        </lifespan>
+        <timeScale>3.0</timeScale>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Quads">
+        </geometry>
+        <alignment>FIXED</alignment>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>4</textureDivisionsS>
+        <textureDivisionsT>4</textureDivisionsT>
+        <priorityMode>
+          <priority>-1</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>10.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>Tilt Ring</name>
+        <particleCount>1</particleCount>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.8, 1.0, 1.0, 1.0</start>
+            <end>0.0, 0.8, 0.8, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <middle>0.8</middle>
+            <end>1.0</end>
+            <in>0.1</in>
+            <out>0.9</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.3</translation>
+          <rotation>0.0, 0.0, 3.9643706E-9, 1.0</rotation>
+        </transform>
+        <orientation class="com.threerings.probs.QuaternionVariable$Uniform">
+          <minimum>-0.34906584, 0.34906584, 0.0</minimum>
+          <maximum>-0.34906584, 0.34906584, 0.0</maximum>
+        </orientation>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Outward">
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Constant">
+        </speed>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>0.5</minimum>
+          <maximum>0.75</maximum>
+        </lifespan>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Quads">
+        </geometry>
+        <alignment>FIXED</alignment>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>4</textureDivisionsS>
+        <textureDivisionsT>4</textureDivisionsT>
+        <priorityMode>
+          <priority>4</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>11.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>Tilt Ring 2</name>
+        <particleCount>1</particleCount>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.8, 1.0, 1.0, 1.0</start>
+            <end>0.0, 0.8, 0.8, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <middle>0.8</middle>
+            <end>1.0</end>
+            <in>0.1</in>
+            <out>0.9</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.3</translation>
+          <rotation>0.0, 0.0, -1.9821853E-9, 1.0</rotation>
+        </transform>
+        <orientation class="com.threerings.probs.QuaternionVariable$Uniform">
+          <minimum>-0.34906584, -0.34906584, 0.0</minimum>
+          <maximum>-0.34906584, -0.34906584, 0.0</maximum>
+        </orientation>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Outward">
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Constant">
+        </speed>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>0.5</minimum>
+          <maximum>0.75</maximum>
+        </lifespan>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Quads">
+        </geometry>
+        <alignment>FIXED</alignment>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>4</textureDivisionsS>
+        <textureDivisionsT>4</textureDivisionsT>
+        <priorityMode>
+          <priority>4</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>11.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>sparks</name>
+        <particleCount>6</particleCount>
+        <alphaMode>ADDITIVE</alphaMode>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.4, 1.0, 1.0, 0.5</start>
+            <end>0.0, 0.2, 0.2, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Linear">
+            <start>0.25</start>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+            </easing>
+          </function>
+        </size>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Cone">
+          <direction>0.0, -4.371139E-8, 1.0</direction>
+          <minimumAngle>0.5235988</minimumAngle>
+          <maximumAngle>1.3089969</maximumAngle>
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>3.0</minimum>
+          <maximum>4.0</maximum>
+        </speed>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>0.5</minimum>
+          <maximum>0.75</maximum>
+        </lifespan>
+        <timeScale>4.0</timeScale>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Quads">
+          <segments>1</segments>
+        </geometry>
+        <alignment>VELOCITY</alignment>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>4</textureDivisionsS>
+        <textureDivisionsT>4</textureDivisionsT>
+        <length class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>0.25</value>
+          </function>
+        </length>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>15.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>GLARE</name>
+        <particleCount>1</particleCount>
+        <alphaMode>ADDITIVE</alphaMode>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.8, 1.0, 1.0, 1.0</start>
+            <end>0.0, 0.2, 0.2, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <start>0.5</start>
+            <middle>2.0</middle>
+            <in>0.05</in>
+            <out>0.95</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.25</translation>
+        </transform>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Outward">
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Constant">
+        </speed>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Constant">
+          <value>1.0</value>
+        </lifespan>
+        <timeScale>2.5</timeScale>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Meshes">
+          <model>
+            <name>particle/mesh/offcenter_forward/model.dat</name>
+          </model>
+        </geometry>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>4</textureDivisionsS>
+        <textureDivisionsT>4</textureDivisionsT>
+        <priorityMode>
+          <priority>10</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>15.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>SHADOW</name>
+        <particleCount>1</particleCount>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.0, 0.6, 0.6, 1.0</start>
+            <end>0.0, 0.4, 0.4, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticIn">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <start>0.5</start>
+            <middle>2.25</middle>
+            <in>0.05</in>
+            <out>0.95</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.25</translation>
+        </transform>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Outward">
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Constant">
+        </speed>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Constant">
+          <value>1.0</value>
+        </lifespan>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Meshes">
+          <model>
+            <name>particle/mesh/offcenter_forward/model.dat</name>
+          </model>
+        </geometry>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>4</textureDivisionsS>
+        <textureDivisionsT>4</textureDivisionsT>
+        <priorityMode>
+          <priority>-10</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>15.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>dust up</name>
+        <particleCount>4</particleCount>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.8, 1.0, 1.0, 1.0</start>
+            <end>0.0, 0.7607843, 0.7607843, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <start>0.1</start>
+            <middle>0.5</middle>
+            <end>0.4</end>
+            <in>0.05</in>
+            <out>0.95</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.1</translation>
+        </transform>
+        <placer class="com.threerings.opengl.effect.config.PlacerConfig$Shell">
+          <outerRadius>0.25</outerRadius>
+        </placer>
+        <orientation class="com.threerings.probs.QuaternionVariable$Uniform">
+          <minimum>0.0, 0.0, -3.1415927</minimum>
+          <maximum>0.0, 0.0, 3.1415927</maximum>
+        </orientation>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Cone">
+          <direction>0.0, -4.371139E-8, 1.0</direction>
+          <maximumAngle>0.08726646</maximumAngle>
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>2.0</minimum>
+          <maximum>2.5</maximum>
+        </speed>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>1.0</minimum>
+          <maximum>1.25</maximum>
+        </lifespan>
+        <timeScale>2.0</timeScale>
+        <influences>
+          <entry class="com.threerings.opengl.effect.config.InfluenceConfig$Gravity">
+            <acceleration>0.0, 0.0, -3.0</acceleration>
+            <rotateWithEmitter>true</rotateWithEmitter>
+          </entry>
+        </influences>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Quads">
+        </geometry>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>4</textureDivisionsS>
+        <textureDivisionsT>4</textureDivisionsT>
+        <priorityMode>
+          <priority>-1</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>14.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>chunks up</name>
+        <particleCount>6</particleCount>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Linear">
+            <start>0.0, 0.7294118, 0.7294118, 1.0</start>
+            <end>0.0, 0.14901961, 0.14901961, 0.0</end>
+            <easing class="com.threerings.opengl.effect.Easing$QuadraticOut">
+            </easing>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <start>0.025</start>
+            <middle>0.25</middle>
+            <end>0.28</end>
+            <in>0.05</in>
+            <out>0.95</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.25</translation>
+        </transform>
+        <placer class="com.threerings.opengl.effect.config.PlacerConfig$Ring">
+          <innerRadius>0.333</innerRadius>
+          <outerRadius>0.333</outerRadius>
+        </placer>
+        <orientation class="com.threerings.probs.QuaternionVariable$Uniform">
+          <minimum>0.0, 0.0, -3.1415927</minimum>
+          <maximum>0.0, 0.0, 3.1415927</maximum>
+        </orientation>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Cone">
+          <direction>0.0, -4.371139E-8, 1.0</direction>
+          <maximumAngle>0.17453292</maximumAngle>
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>0.75</minimum>
+          <maximum>1.5</maximum>
+        </speed>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>1.0</minimum>
+          <maximum>1.2</maximum>
+        </lifespan>
+        <startTime>0.15</startTime>
+        <timeScale>1.75</timeScale>
+        <influences>
+          <entry class="com.threerings.opengl.effect.config.InfluenceConfig$Gravity">
+            <acceleration>0.0, 0.0, -3.0</acceleration>
+            <rotateWithEmitter>true</rotateWithEmitter>
+          </entry>
+        </influences>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Quads">
+        </geometry>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>4</textureDivisionsS>
+        <textureDivisionsT>4</textureDivisionsT>
+        <priorityMode>
+          <priority>3</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$VariableConstant">
+          <value class="com.threerings.probs.FloatVariable$Uniform">
+            <minimum>4.0</minimum>
+            <maximum>5.0</maximum>
+          </value>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+      <entry>
+        <name>scar</name>
+        <particleCount>1</particleCount>
+        <color class="com.threerings.probs.ColorFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.ColorFunction$Multipoint">
+            <start>0.0, 1.0, 1.0, 1.0</start>
+            <middle>
+              <entry>
+                <color>0.24313726, 0.33333334, 0.33333334, 0.75</color>
+                <offset>0.15</offset>
+              </entry>
+            </middle>
+            <end>0.0, 0.0, 0.0, 0.0</end>
+          </function>
+        </color>
+        <size class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$ThreePoint">
+            <middle>1.2</middle>
+            <end>1.3</end>
+            <in>0.05</in>
+            <out>0.95</out>
+          </function>
+        </size>
+        <transform>
+          <translation>0.0, 0.0, 0.1</translation>
+        </transform>
+        <orientation class="com.threerings.probs.QuaternionVariable$Uniform">
+          <minimum>0.0, 0.0, -3.1415927</minimum>
+          <maximum>0.0, 0.0, 3.1415927</maximum>
+        </orientation>
+        <shooter class="com.threerings.opengl.effect.config.ShooterConfig$Cone">
+          <direction>0.0, -4.371139E-8, 1.0</direction>
+          <maximumAngle>0.17453292</maximumAngle>
+        </shooter>
+        <speed class="com.threerings.probs.FloatVariable$Constant">
+        </speed>
+        <respawnDeadParticles>false</respawnDeadParticles>
+        <lifespan class="com.threerings.probs.FloatVariable$Uniform">
+          <minimum>2.5</minimum>
+          <maximum>3.0</maximum>
+        </lifespan>
+        <timeScale>1.2</timeScale>
+        <geometry class="com.threerings.opengl.effect.config.ParticleSystemConfig$Quads">
+        </geometry>
+        <alignment>FIXED</alignment>
+        <material>
+          <name>Model/Translucent</name>
+          <arguments>
+            <key class="java.lang.String">Blend Type</key>
+            <value class="java.lang.String">White (default)</value>
+            <key class="java.lang.String">Fog</key>
+            <value class="java.lang.String">Disabled</value>
+            <key class="java.lang.String">Light Override</key>
+            <value class="com.threerings.opengl.renderer.config.LightStateConfig$Disabled">
+            </value>
+            <key class="java.lang.String">Pass Mode</key>
+            <value class="java.lang.String">Normal</value>
+            <key class="java.lang.String">Texture</key>
+            <value class="com.threerings.config.ConfigReference">
+              <name>2D/File/Default</name>
+              <arguments>
+                <key class="java.lang.String">File</key>
+                <value class="java.lang.String">particle/texture/bomb_blast.png</value>
+              </arguments>
+            </value>
+          </arguments>
+        </material>
+        <textureDivisionsS>2</textureDivisionsS>
+        <textureDivisionsT>2</textureDivisionsT>
+        <priorityMode>
+          <priority>-5</priority>
+        </priorityMode>
+        <frame class="com.threerings.probs.FloatFunctionVariable$Fixed">
+          <function class="com.threerings.opengl.effect.FloatFunction$Constant">
+            <value>2.0</value>
+          </function>
+        </frame>
+        <rotateOrientationsWithEmitter>false</rotateOrientationsWithEmitter>
+      </entry>
+    </layers>
+  </implementation>
+  <configs>
+  </configs>
+</object>
+</java>
