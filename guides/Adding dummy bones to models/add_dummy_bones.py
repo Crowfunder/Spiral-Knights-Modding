@@ -1,6 +1,6 @@
 ###############################################################
 # by Crowfunder                                               #
-# Copyright my ass but also the GPL-3.0 License               #
+# Copyright my ass                                            #
 # Github: https://github.com/Crowfunder                       #
 ###############################################################
 
