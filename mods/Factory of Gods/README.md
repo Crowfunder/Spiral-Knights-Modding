@@ -2,7 +2,7 @@
 
 # The Return To Moyai Citadel DLC - Factory of Gods
 *The first mod with voice acting!*
-This mod continues the story of #"The Return to Moyai Citadel" , it is recommended to play it beforehand. It reskins Ironclaw Munitions Factory into a very sinister and otherwordly experience.
+This mod continues the story of [The Return to Moyai Citadel](https://github.com/Crowfunder/Spiral-Knights-Modding/tree/main/mods/The%20Return%20to%20Moyai%20Citadel) , it is recommended to play it beforehand. It reskins Ironclaw Munitions Factory into a very sinister and otherwordly experience.
 
 # Installation
 Install the main mod normally and place projectx-config.jar in Spiral Knights/code folder. 
