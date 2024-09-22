@@ -1,5 +1,6 @@
 # Spiral Knights Modding Repository
-*aka. Parmesan Cheese Modding*
+##### *aka. Parmesan Cheese Modding*
+
 A dump of my published mods, guides and modding assets for Spiral Knights. Also includes workfiles such as GIMP projects for graphics.
 
 ## Featured Mods
